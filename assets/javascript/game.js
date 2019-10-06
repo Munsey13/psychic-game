@@ -28,7 +28,7 @@ function lost() {
 }
 
 function guessed() {
-    let user = String.fromCharCode(event.keycode).toLowerCase();
+    let user = String.fromCharCode(event.keyCode).toLowerCase();
     lettersGuessed.push(user);
     document.getElementById("guessed-text").innerHTML = lettersGuessed;
 }
