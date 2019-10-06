@@ -15,12 +15,14 @@ function restart() {
 
 function win() {
    wins++;
-   document.getElementById("win-text").innerHTML = winner;
+   alert("winner winner chicken dinner");
+   document.getElementById("win-text").innerHTML = wins;
    restart(); 
 }
 
 function lost() {
     losses++;
+    alert("stop while you are ahead");
     document.getElementById("lost-text").innerHTML = losses;
     restart();
 }
@@ -31,7 +33,7 @@ function guessed() {
     document.getElementById("guessed-text").innerHTML = lettersGuessed;
 }
 
-Document.onkeydown = function(){
+document.onkeydown = function(){
  let key = String.fromCharCode(event.keyCode).toLowerCase();
  guessed()
 
